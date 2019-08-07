@@ -1,0 +1,79 @@
+html body {
+  margin: 0;
+}
+html body .header {
+  height: 100px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  z-index: 999;
+}
+html body .header .logo {
+  height: 170px;
+  width: 170px;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  background-image: url("../mediaStorage/milesAheadLogo.png");
+  background-size: cover;
+}
+html body .super {
+    height: 800px;
+    max-width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+html body .super #studioVid {
+    min-width: 100%;
+    margin: 0 auto;
+    position: fill;
+}
+html body .content {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+html body .content .vidOverlay {
+    height: 800px;
+    z-index: 2;
+}
+html body .content .missionStatement {
+    height: 500px;
+    background-color: white;
+}
+html body .content .instructors {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+html body .content .instructors .stackBoxSection {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html body .content .instructors .stackBoxSection .stackBox {
+    height: 200px;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+}
+html body .content .instructors .stackBoxSection .stackBox .item {
+    height: 200px;
+    width: 160px;
+    position: relative;
+    background-image: linear-gradient(to right, rgb(53, 53, 53), rgba(0, 0, 0));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 0 3px black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s;
+}
+html body .content .instructors .stackBoxSection .stackBox .item:hover {
+    transform: scale(1.3);
+}
