@@ -1,48 +1,57 @@
 var portfolio = [{
-    "name":"Project 1",
+    "name":"Instructor 1",
     "basicDes":"Bacon ipsum hamhock",
-    "id":"proj1"
+    "id":"proj1",
+    "photo":"../mediaStorage/generic.png"
 },
 {
-    "name":"Project 2",
+    "name":"Instructor 2",
     "basicDes":"Bacon ipsum hamhock",
-    "id":"proj2"
+    "id":"proj2",
+    "photo":"../mediaStorage/generic.png"
 },
 {
-    "name":"Project 3",
+    "name":"Instructor 3",
     "basicDes":"Bacon ipsum hamhock",
-    "id":"proj3"
+    "id":"proj3",
+    "photo":"../mediaStorage/generic.png"
 },
 {
-    "name":"Project 4",
+    "name":"Instructor 4",
     "basicDes":"Bacon ipsum hamhock",
-    "id":"proj4"
+    "id":"proj4",
+    "photo":"../mediaStorage/generic.png"
 },
 {
-    "name":"Project 5",
+    "name":"Instructor 5",
     "basicDes":"Bacon ipsum hamhock",
-    "id":"proj5"
+    "id":"proj5",
+    "photo":"../mediaStorage/generic.png"
 },
 {
-    "name":"Project 6",
+    "name":"Instructor 6",
     "basicDes":"Bacon ipsum hamhock",
-    "id":"proj6"
+    "id":"proj6",
+    "photo":"../mediaStorage/generic.png"
 },
 {
-    "name":"Project 7",
+    "name":"Instructor 7",
     "basicDes":"Bacon ipsum hamhock",
-    "id":"proj7"
+    "id":"proj7",
+    "photo":"../mediaStorage/generic.png"
 }];
 
 createPortfolioStack();
 
 function createPortfolioStack(){
-    let cardWidth = 160;
+    let cardWidth = 200;
     for(let i=0; i<portfolio.length; i++){
         let projectId = portfolio[i].id;
         $('#stackBox').append(`
             <div class="item" id=${projectId} onmouseover="toTopOfStack('${projectId}')">
                 ${portfolio[i].name}
+                <div class="instructorPhoto" style="position: absolute; top: 20px; height: 70px; width: 70px;
+                background-image: url(${portfolio[i].photo}); background-size: cover;"></div>
             </div>
         `);
 
