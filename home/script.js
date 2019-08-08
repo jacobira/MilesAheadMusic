@@ -1,57 +1,69 @@
 var portfolio = [{
-    "name":"Instructor 1",
-    "basicDes":"Bacon ipsum hamhock",
-    "id":"proj1",
-    "photo":"../mediaStorage/generic.png"
+    "name":"Madison Moline",
+    "basicDes":"Viola & Violin",
+    "id":"instructor1",
+    "photo":"../mediaStorage/madisonMoline.png"
 },
 {
-    "name":"Instructor 2",
-    "basicDes":"Bacon ipsum hamhock",
-    "id":"proj2",
-    "photo":"../mediaStorage/generic.png"
+    "name":"Jason Fullmer",
+    "basicDes":"Guitar, Ukulele, Banjo & Mandolin",
+    "id":"instructor2",
+    "photo":"../mediaStorage/jasonFullmer.png"
 },
 {
-    "name":"Instructor 3",
-    "basicDes":"Bacon ipsum hamhock",
-    "id":"proj3",
-    "photo":"../mediaStorage/generic.png"
+    "name":"Austie Robinson",
+    "basicDes":"Trumpet",
+    "id":"instructor3",
+    "photo":"../mediaStorage/austieRobinson.png"
 },
 {
-    "name":"Instructor 4",
-    "basicDes":"Bacon ipsum hamhock",
-    "id":"proj4",
-    "photo":"../mediaStorage/generic.png"
+    "name":"Nelsen Campbell",
+    "basicDes":"Trombone",
+    "id":"instructor4",
+    "photo":"../mediaStorage/nelsenCampbell.png"
 },
 {
-    "name":"Instructor 5",
-    "basicDes":"Bacon ipsum hamhock",
+    "name":"Myles Lawrence",
+    "basicDes":"Saxophone & Clarinet",
     "id":"proj5",
+    "photo":"../mediaStorage/mylesLawrence.png"
+},
+{
+    "name":"Megan Carson",
+    "basicDes":"Voice",
+    "id":"instructor6",
+    "photo":"../mediaStorage/meganCarson.png"
+},
+{
+    "name":"Jordan Turner",
+    "basicDes":"Songwriting & Music Production",
+    "id":"instructor7",
     "photo":"../mediaStorage/generic.png"
 },
 {
-    "name":"Instructor 6",
-    "basicDes":"Bacon ipsum hamhock",
-    "id":"proj6",
-    "photo":"../mediaStorage/generic.png"
-},
-{
-    "name":"Instructor 7",
-    "basicDes":"Bacon ipsum hamhock",
-    "id":"proj7",
-    "photo":"../mediaStorage/generic.png"
+    "name":"Mitch Romney",
+    "basicDes":"Drums",
+    "id":"instructor8",
+    "photo":"../mediaStorage/mitchRomney.png"
 }];
 
 createPortfolioStack();
 
 function createPortfolioStack(){
-    let cardWidth = 200;
+    let cardWidth = 300;
     for(let i=0; i<portfolio.length; i++){
         let projectId = portfolio[i].id;
         $('#stackBox').append(`
             <div class="item" id=${projectId} onmouseover="toTopOfStack('${projectId}')">
-                ${portfolio[i].name}
-                <div class="instructorPhoto" style="position: absolute; top: 20px; height: 70px; width: 70px;
+                <div class="instructorPhoto" style="position: absolute; top: 20px; height: 100px; width: 100px;
                 background-image: url(${portfolio[i].photo}); background-size: cover;"></div>
+                <div class="instructorName" style="position: absolute; top: 150px; font-size: 20px;">
+                    ${portfolio[i].name}
+                </div>
+                <div class="instructorDesc" style="width: 130px; position: absolute; top: 180px; font-size: 12px;
+                display: flex; flex-wrap: wrap; justify-content: center; text-align: center;">
+                    ${portfolio[i].basicDes}
+                </div>
             </div>
         `);
 

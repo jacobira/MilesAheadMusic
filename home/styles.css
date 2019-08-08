@@ -1,110 +1,213 @@
 @import url('https://fonts.googleapis.com/css?family=Beth+Ellen&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 
-html body {
-  margin: 0;
+
+
+/* Small Phone specs */
+
+@media (min-width: 500px){
+
 }
-html body .header {
-  height: 100px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  position: fixed;
-  z-index: 999;
+
+
+
+
+
+
+
+/* Large Phone specs */
+
+@media (min-width: 700px){
+
 }
-html body .header .logo {
-  height: 200px;
-  width: 200px;
-  position: absolute;
-  left: 20px;
-  top: 10px;
-  background-image: url("../mediaStorage/milesAheadLogo.png");
-  background-size: cover;
+
+
+
+
+
+
+
+/* Medium Screen or Tablet specs */
+
+@media (min-width: 1000px){
+
 }
-html body .super {
-    height: 700px;
-    min-width: 100%;
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    z-index: 1;
-}
-html body .super #studioVid {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    min-height: 50%;
-    min-width: 50%;
-}
-html body .content {
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-}
-html body .content .vidOverlay {
-    height: 700px;
-    z-index: 2;
-}
-html body .content .missionStatement {
-    height: 500px;
-    font-family: "Permanent Marker", cursive;
-    background-color: white;
-}
-html body .content .missionStatement .text {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-html body .content .missionStatement .text .statementMain {
-    font-size: 50px;
-}
-html body .content .instructorsHeading {
-    height: 50px;
-    font-size: 45px;
-    font-family: "Beth Ellen", cursive;
-    text-align: center;
-    background-color: white;
-}
-html body .content .instructors {
-  height: 500px;
-  display: flex;
-  align-items: center;
-  /* font-family: "Beth Ellen", cursive; */
-  background-color: white;
-}
-html body .content .instructors .stackBoxSection {
-    height: 500px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-html body .content .instructors .stackBoxSection .stackBox {
-    height: 300px;
-    width: 1200px;
-    display: flex;
-    justify-content: center;
-}
-html body .content .instructors .stackBoxSection .stackBox .item {
-    height: 300px;
-    width: 200px;
-    position: relative;
-    background-image: linear-gradient(to right, rgb(153, 40, 40), rgb(100, 7, 7));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-shadow: 0 0 3px black;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: .2s;
-}
-html body .content .instructors .stackBoxSection .stackBox .item:hover {
-    transform: scale(1.5);
+
+/* Large Screen specs */
+
+@media (min-width: 0px){
+    html body {
+        margin: 0;
+        font-family: 'Quicksand', sans-serif;
+      }
+      html body .header {
+        height: 100px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        z-index: 999;
+      }
+      html body .header .logo {
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        background-image: url("../mediaStorage/milesAheadLogo.png");
+        background-size: cover;
+      }
+      html body .header .navSection {
+          height: 100%;
+          width: 70%;
+          position: absolute;
+          left: 25%;
+          display: flex;
+          align-items: center;
+      }
+      html body .header .navSection .navBtn {
+          font-family: 'Permanent Marker', cursive;
+          font-size: 30px;
+          color: white;
+          margin-left: 20px;
+          transition: .2s;
+          cursor: pointer;
+      }
+      html body .header .navSection .navBtn:hover {
+          transform: scale(1.05);
+          transition: .2s;
+      }
+      html body .header .navSection #aboutUs {
+          margin-left: 170px;
+      }
+      html body .header .navSection #lessonInfo {
+          margin-left: 200px;
+      }
+      html body .super {
+          height: 600px;
+          min-width: 100%;
+          position: fixed;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          z-index: 1;
+      }
+      html body .super #studioVid {
+          position: absolute;
+          width: 100%;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          margin: auto;
+          min-height: 50%;
+          min-width: 50%;
+      }
+      html body .content {
+          width: 100%;
+          position: absolute;
+          z-index: 2;
+      }
+      html body .content .vidOverlay {
+          height: 600px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 2;
+      }
+      html body .content .vidOverlay .sellPoint {
+          height: 300px;
+          color: white;
+          font-family: 'Beth Ellen', cursive;
+          text-align: center;
+          text-shadow: 0 0 5px black;
+      }
+      html body .content .vidOverlay .sellPoint .mainText {
+          font-size: 50px;
+          margin-top: 50px;
+      }
+      html body .content .vidOverlay .sellPoint .subText {
+          font-size: 30px;
+          font-family: 'Permanent Marker', cursive;
+      }
+      html body .content .vidOverlay .enrollBtn {
+          height: 100px;
+          width: 200px;
+          border-radius: 50px;
+          background-color: rgb(31, 29, 29);
+          color: white;
+          font-size: 25px;
+          text-shadow: 0 0 2px black;
+          box-shadow: 0 0 15px black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 550px;
+          transition: .2s;
+          cursor: pointer;
+      }
+      html body .content .vidOverlay .enrollBtn:hover {
+          transform: scale(1.05);
+          transition: .2s;
+      }
+      html body .content .missionStatement {
+          height: 500px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: white;
+      }
+      html body .content .missionStatement .text {
+          width: 800px;
+          font-size: 30px;
+          color: rgb(56, 54, 54);
+          font-family: 'Quicksand', sans-serif;
+          text-align: center;
+      }
+      html body .content .instructorsHeading {
+          height: 50px;
+          font-size: 45px;
+          font-family: "Permanent Marker", cursive;
+          text-align: center;
+          background-color: white;
+      }
+      html body .content .instructors {
+        height: 600px;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        overflow: hidden;
+      }
+      html body .content .instructors .stackBoxSection {
+          height: 400px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      html body .content .instructors .stackBoxSection .stackBox {
+          height: 400px;
+          display: flex;
+          justify-content: center;
+      }
+      html body .content .instructors .stackBoxSection .stackBox .item {
+          height: 400px;
+          width: 250px;
+          position: relative;
+          background-image: linear-gradient(to right, rgb(56, 53, 53), rgb(31, 29, 29));
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          text-shadow: 0 0 3px black;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: .2s;
+      }
+      html body .content .instructors .stackBoxSection .stackBox .item:hover {
+          transform: scale(1.3);
+      }
 }
