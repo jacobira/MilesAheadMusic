@@ -74,18 +74,29 @@ var reviews = [{
 
 createPortfolioStack();
 populateReviews();
+displayPop();
 
 window.onscroll = function(){
     growShrinkLogo();
 }
 
+function displayPop(){
+    setTimeout(function(){
+        document.getElementById('pop1').classList.remove('hidden');
+    }, 4000);
+}
+
+function hidePop(){
+    document.getElementById('pop1').classList.add('hidden');
+}
+
 function populateReviews(){
-    for(let i=0; i<reviews.length; i++){
+    for(let i=0; i<3; i++){
         $('.realReviews').append(`
-            <div class="singleReview id="review${i+1}">
-                <div class="reviewerName">${reviews[i].reviewerName}</div>
-                <div class="relationship">${reviews[i].relationship}</div>
+            <div class="singleReview" id="review${i+1}">
                 <div class="review">"${reviews[i].review}"</div>
+                <div class="reviewerName">- ${reviews[i].reviewerName}</div>
+                <div class="relationship">${reviews[i].relationship}</div>
             </div>
         `)
     }
