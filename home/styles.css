@@ -85,24 +85,22 @@
       }
       html body .super {
           height: 750px;
-          min-width: 100%;
+          width: 100%;
           position: absolute;
-          top: -50%;
-          left: -50%;
-          width: 200%;
-          height: 200%;
+          top: 0;
+          bottom: 0;
+          overflow: hidden;
           z-index: 1;
       }
       html body .super #studioVid {
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
           position: absolute;
-          width: 100%;
-          top: 0;
-          bottom: 0;
-          right: 0;
-          left: 0;
-          margin: auto;
-          min-height: 50%;
-          min-width: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
       }
       html body .content {
           width: 100%;
@@ -125,7 +123,7 @@
       }
       html body .content .vidOverlay .sellPoint .mainText {
           font-size: 80px;
-          margin-top: 50px;
+          margin-top: 100px;
       }
       html body .content .vidOverlay .sellPoint .subText {
           font-size: 30px;
@@ -283,4 +281,9 @@
         margin: 0 auto;
         margin-top: 10px;
       }
+      /* html body .footer {
+          height: 20px;
+          width: 100%;
+          background-color: rgb(31, 29, 29);
+      } */
 }
