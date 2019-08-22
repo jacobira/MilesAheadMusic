@@ -15,3 +15,10 @@ function growShrinkLogo(){
         logo.style.top = "10px";
     }
 }
+
+function displayForm(){
+    document.getElementById("form").classList.remove("hidden");
+}
+function closeForm(){
+    document.getElementById("form").classList.add("hidden");
+}

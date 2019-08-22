@@ -45,6 +45,12 @@ var portfolio = [{
     "basicDes":"Drums",
     "id":"instructor8",
     "photo":"../mediaStorage/mitchRomney.png"
+},
+{
+    "name":"Lauren Erickson",
+    "basicDes":"Flute",
+    "id":"instructor9",
+    "photo":"../mediaStorage/generic.png"
 }];
 
 var reviews = [{
@@ -78,6 +84,13 @@ displayPop();
 
 window.onscroll = function(){
     growShrinkLogo();
+}
+
+function displayForm(){
+    document.getElementById("form").classList.remove("hidden");
+}
+function closeForm(){
+    document.getElementById("form").classList.add("hidden");
 }
 
 function displayPop(){
