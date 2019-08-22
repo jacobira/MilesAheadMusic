@@ -73,6 +73,10 @@
           transition: .2s;
           cursor: pointer;
       }
+      html body .header .navSection .navBtn a {
+          text-decoration: none;
+          color: inherit;
+      }
       html body .header .navSection .navBtn:hover {
           transform: scale(1.05);
           transition: .2s;
@@ -266,7 +270,12 @@
           color: white;
           text-shadow: 0 0 5px black, 0 0 5px black, 0 0 10px black, 0 0 15px black, 0 0 20px black;
           border-radius: 7px;
-          margin: 10px;
+          margin: 20px;
+          transition: .4s;
+      }
+      html body .content .reviews .realReviews .singleReview:hover {
+          transform: scale(1.15);
+          transition: .4s;
       }
       html body .content .reviews .realReviews #review1 {
         background-image: url('../mediaStorage/studioPic1.jpg');

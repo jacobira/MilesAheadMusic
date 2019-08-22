@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Julius+Sans+One|Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+
+html body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+html body .header {
+    height: 100px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 999;
+}
+html body .header .logo {
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    background-image: url("../mediaStorage/milesAheadLogo.png");
+    background-size: cover;
+    transition: .3s;
+}
+html body .header .navSection {
+    height: 100%;
+    width: 70%;
+    position: absolute;
+    left: 25%;
+    display: flex;
+    align-items: center;
+}
+html body .header .navSection .navBtn {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 30px;
+    color: white;
+    margin-left: 20px;
+    transition: .2s;
+    cursor: pointer;
+}
+html body .header .navSection .navBtn a {
+    text-decoration: none;
+    color: inherit;
+}
+html body .header .navSection .navBtn:hover {
+    transform: scale(1.05);
+    transition: .2s;
+}
+html body .header .navSection #aboutUs {
+    margin-left: 170px;
+}
+html body .header .navSection #lessonInfo {
+    margin-left: 200px;
+}
+html body .content {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    z-index: 2;
+}
+html body .content .titleText {
+    height: 100px;
+    width: 100%;
+    margin-top: 80px;
+    text-align: center;
+    font-family: 'Sacramento', cursive;
+    font-size: 50px;
+}
+html body .content .infoSection {
+    width: 100%;
+}
+html body .content .infoSection .mapSection {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+html body .content .infoSection .mapDisplay {
+    height: 400px;
+    width: 800px;
+    box-shadow: 0 0 10px black;
+    border-radius: 5px;
+    background-image: url("../mediaStorage/milesAheadMap.png");
+    background-size: cover;
+    cursor: pointer;
+}
+html body .content .infoSection .infoDetails {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+html body .content .infoSection .infoDetails div {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html body .content .infoSection .infoDetails .phone .phoneIcon {
+    height: 50px;
+    width: 50px;
+    background-image: url(../mediaStorage/phoneIcon.png);
+    background-size: cover;
+}
+html body .content .infoSection .infoDetails .phone .phoneNumber {
+    width: auto;
+    display: block;
+}
+html body .content .infoSection .infoDetails .email .emailIcon {
+    height: 50px;
+    width: 50px;
+    background-image: url(../mediaStorage/emailIcon.png);
+    background-size: cover;
+}
+html body .content .infoSection .infoDetails .email .emailAddress {
+    display: block;
+    width: auto;
+}
+html body .content .infoSection .infoDetails .address .addressIcon {
+    height: 50px;
+    width: 50px;
+    background-image: url(../mediaStorage/addressIcon.png);
+    background-size: cover;
+}
+html body .content .infoSection .infoDetails .address .streetAddress {
+    display: block;
+    width: auto;
+}
+html body .content .infoSection .dropInTitle {
+    height: 100px;
+    width: 100%;
+}
+html body .content .infoSection .hoursSec {
+    height: 400px;
+    width: 100%;
+}
+html body .content .footer {
+    height: 70px;
+    width: 100%;
+    background-color: rgb(31, 29, 29);
+    z-index: 3;
+}
+html .hidden {
+    display: none;
+}
