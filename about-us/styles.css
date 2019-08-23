@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Julius+Sans+One|Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+
+html body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+html body .header {
+    height: 100px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 999;
+}
+html body .header .logo {
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    background-image: url("../mediaStorage/milesAheadLogo.png");
+    background-size: cover;
+    transition: .3s;
+}
+html body .header .logo:hover {
+    transform: scale(1.05);
+    transition: .3s;
+}
+html body .header .navSection {
+    height: 100%;
+    width: 70%;
+    position: absolute;
+    left: 25%;
+    display: flex;
+    align-items: center;
+}
+html body .header .navSection .navBtn {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 30px;
+    color: white;
+    margin-left: 20px;
+    transition: .2s;
+    cursor: pointer;
+}
+html body .header .navSection .navBtn a {
+    text-decoration: none;
+    color: inherit;
+}
+html body .header .navSection .navBtn:hover {
+    transform: scale(1.05);
+    transition: .2s;
+}
+html body .header .navSection #aboutUs {
+    margin-left: 170px;
+}
+html body .header .navSection #lessonInfo {
+    margin-left: 200px;
+}
+html body .content {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    z-index: 2;
+}
+html body .content .introduction {
+    height: 300px;
+    width: 100%;
+}
+html body .content .introduction .schoolName {
+    width: 900px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-family: 'Julius Sans One', sans-serif;
+}
+html body .content .introduction .introText {
+    margin: 0 auto;
+    width: 900px;
+    font-size: 20px;
+}
+html body .content .topic {
+    width: 100%;
+    margin-bottom: 80px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html body .content .topic .icon {
+    height: 100px;
+    width: 100px;
+    margin-right: 50px;
+}
+html body .content #whatWeTeach .icon {
+    background-image: url("../mediaStorage/bookIcon.png");
+    background-size: cover;
+}
+html body .content #easyForParents .icon {
+    background-image: url("../mediaStorage/vanIcon.png");
+    background-size: cover;
+}
+html body .content #teachers .icon {
+    background-image: url("../mediaStorage/capIcon.png");
+    background-size: cover;
+}
+html body .content #community .icon {
+    background-image: url("../mediaStorage/commIcon.png");
+    background-size: cover;
+}
+html body .content .topic .info {
+    width: 700px;
+}
+html body .content .topic .info .head {
+    font-family: "Sacramento", cursive;
+    font-size: 50px;
+}
+
+html body .content .footer {
+    height: 70px;
+    width: 100%;
+    background-color: rgb(31, 29, 29);
+    z-index: 3;
+}
+html body .modalForm {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+html body .modalForm .modalFormBox {
+    height: 700px;
+    width: 600px;
+    background-color: rgb(31, 29, 29);
+    color: white;
+    font-size: 20px;
+}
+html body .hidden {
+    display: none;
+}

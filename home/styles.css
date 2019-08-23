@@ -361,7 +361,24 @@
           transform: scale(1.05);
           transition: .2s;
       }
-      html .hidden {
+      html body .modalForm {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1001;
+    }
+    html body .modalForm .modalFormBox {
+        height: 700px;
+        width: 600px;
+        background-color: rgb(31, 29, 29);
+        color: white;
+        font-size: 20px;
+    }
+      html body .hidden {
           display: none;
       }
 }

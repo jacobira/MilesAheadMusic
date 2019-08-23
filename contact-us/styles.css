@@ -23,6 +23,10 @@ html body .header .logo {
     background-size: cover;
     transition: .3s;
 }
+html body .header .logo:hover {
+    transform: scale(1.05);
+    transition: .3s;
+}
 html body .header .navSection {
     height: 100%;
     width: 70%;
@@ -84,6 +88,11 @@ html body .content .infoSection .mapDisplay {
     background-image: url("../mediaStorage/milesAheadMap.png");
     background-size: cover;
     cursor: pointer;
+    transition: .2s;
+}
+html body .content .infoSection .mapDisplay:hover {
+    transform: scale(1.05);
+    transition: .2s;
 }
 html body .content .infoSection .infoDetails {
     width: 100%;
@@ -200,6 +209,8 @@ html body .modalForm .modalFormBox {
     height: 700px;
     width: 600px;
     background-color: rgb(31, 29, 29);
+    color: white;
+    font-size: 20px;
 }
 html body .hidden {
     display: none;
