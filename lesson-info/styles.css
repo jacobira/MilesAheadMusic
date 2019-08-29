@@ -62,6 +62,7 @@ html body .content {
     position: absolute;
     top: 100px;
     z-index: 2;
+    font-size: 20px;
 }
 html body .content .sellPoint {
     height: 100px;
@@ -94,4 +95,79 @@ html body .content .examples .instList {
 html body .content .examples .instList div {
     width: 700px;
     text-align: center;
+}
+html body .content .photoDisplay {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html body .content .photo {
+    height: 400px;
+    width: 600px;
+    background-image: url("../mediaStorage/lessonImage.jpg");
+    background-size: cover;
+}
+html body .content .teachers {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+html body .content .teachers .title{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+html body .content .teachers .text {
+    margin-bottom: 50px;
+}
+html body .content .teachers .teachersFair {
+    width: 100%;
+    text-align: center;
+}
+html body .content .lessons {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+}
+html body .content .lessons .lessonsHead {
+    width: 100%;
+    font-size: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+}
+html body .content .lessons .lessonsType .title {
+    font-family: 'Sacramento', cursive;
+    font-size: 30px;
+}
+html body .content .lessons .lessonsType .text {
+    margin-bottom: 50px;
+}
+html body .content .footer {
+    height: 70px;
+    width: 100%;
+    background-color: rgb(31, 29, 29);
+    z-index: 3;
+}
+html body .modalForm {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+html body .modalForm .modalFormBox {
+    height: 700px;
+    width: 600px;
+    background-color: rgb(31, 29, 29);
+    color: white;
+    font-size: 20px;
+}
+html body .hidden {
+    display: none;
 }
