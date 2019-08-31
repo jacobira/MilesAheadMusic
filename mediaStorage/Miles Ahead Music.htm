@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)file:///Users/jacobbaldwin/MyCodeProjects/freelanceWork/milesAheadMusic/home/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <title>Miles Ahead Music</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="file:///Users/jacobbaldwin/MyCodeProjects/freelanceWork/milesAheadMusic/home/styles.css">
+        <script src="./Miles Ahead Music_files/jquery.min.js"></script>
+        <script src="file:///Users/jacobbaldwin/MyCodeProjects/freelanceWork/milesAheadMusic/home/script.js" type="text/javascript" defer=""></script>
+    <!-- 
+         __  __  ____
+        |  ||  ||    \
+        |  ||  ||    /
+        |  ||  ||    \
+     ___|  ||  ||     |
+     \_____||__||____/
+    https://github.com/jacobira
+
+    -->
+    </head>
+    <body>
+
+        <div class="header">
+            <div class="logo" id="logo" style="width: 100px; height: 100px; top: 0px;"></div>
+            <div class="navSection">
+                <div class="navBtn">
+                    <a href="file:///Users/jacobbaldwin/MyCodeProjects/freelanceWork/milesAheadMusic/contact-us/contact-us.html">
+                        Contact Us
+                    </a>
+                </div>
+                <div class="navBtn" id="aboutUs">
+                    <a href="file:///Users/jacobbaldwin/MyCodeProjects/freelanceWork/milesAheadMusic/about-us/about-us.html">
+                        About Us
+                    </a>
+                </div>
+                <div class="navBtn" id="lessonInfo">
+                    <a href="file:///Users/jacobbaldwin/MyCodeProjects/freelanceWork/milesAheadMusic/lesson-info/lesson-info.html">
+                        Lesson Info
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Layer 1 -->
+        <div class="super">
+            <video autoplay="" loop="" autobuffer="" muted="" playsinline="" id="studioVid">
+                <source src="../mediaStorage/MilesAheadBackgroundVid.mp4">
+            </video>
+            <div class="vidControls"></div>
+        </div>
+
+
+        <!-- Layer 2 -->
+        <div class="content">
+            <div class="vidOverlay">
+                <div class="sellPoint">
+                    <div class="mainText">
+                        Music Lessons on Any Instrument
+                    </div>
+                    <div class="subText">
+                        Best Teachers. Best Price. Any Instrument.
+                    </div>
+                </div>
+                <div class="enrollBtn" onclick="displayForm()">
+                    Get A Quote
+                </div>
+            </div>
+    
+            <div class="missionStatement">
+                <div class="text">
+                        We offer the highest quality lessons at an affordable price so that you can become 
+                        the musician YOU want to become. Miles Ahead Music is made of hand selected teachers 
+                        who have proven to be the very best at what they do.
+                </div>
+            </div>
+            <div class="instructorsHeading">
+                Meet our Teachers!
+            </div>
+            <div class="instructors">
+                <div class="stackBoxSection">
+                    <div class="stackBox" id="stackBox">
+            <div class="item" id="instructor1" onmouseover="toTopOfStack(&#39;instructor1&#39;)" style="left: 600px; z-index: 2;">
+                <div class="instructorPhoto" style="position: absolute; top: 20px; height: 100px; width: 100px;
+                background-image: url(../mediaStorage/madisonMoline.png); background-size: cover;"></div>
+                <div class="instructorName" style="position: absolute; top: 150px; font-size: 20px;">
+                    Madison Moline
+                </div>
+                <div class="instructorDesc" style="width: 130px; position: absolute; top: 180px; font-size: 12px;
+                display: flex; flex-wrap: wrap; justify-content: center; text-align: center;">
+                    Viola &amp; Violin
+                </div>
+            </div>
+        
+            <div class="item" id="instructor2" onmouseover="toTopOfStack(&#39;instructor2&#39;)" style="left: 450px; z-index: 3;">
+                <div class="instructorPhoto" style="position: absolute; top: 20px; height: 100px; width: 100px;
+                background-image: url(../mediaStorage/jasonFullmer.png); background-size: cover;"></div>
+                <div class="instructorName" style="position: absolute; top: 150px; font-size: 20px;">
+                    Jason Fullmer
+                </div>
+                <div class="instructorDesc" style="width: 130px; position: absolute; top: 180px; font-size: 12px;
+                display: flex; flex-wrap: wrap; justify-content: center; text-align: center;">
+                    Guitar, Ukulele, Banjo &amp; Mandolin
+                </div>
+            </div>
+        
+            <div class="item" id="instructor3" onmouseover="toTopOfStack(&#39;instructor3&#39;)" style="left: 300px; z-index: 4;">
+                <div class="instructorPhoto" style="position: absolute; top: 20px; height: 100px; width: 100px;
+                background-image: url(../mediaStorage/austieRobinson.png); background-size: cover;"></div>
+                <div class="instructorName" style="position: absolute; top: 150px; font-size: 20px;">
+                    Austie Robinson
+                </div>
+                <div class="instructorDesc" style="width: 130px; position: absolute; top: 180px; font-size: 12px;
+                display: flex; flex-wrap: wrap; justify-content: center; text-align: center;">
+                    Trumpet
+                </div>
+            </div>
+        
+            <div class="item" id="instructor4" onmouseover="toTopOfStack(&#39;instructor4&#39;)" style="left: 150px; z-index: 5;">
+                <div class="instructorPhoto" style="position: absolute; top: 20px; height: 100px; width: 100px;
+                background-image: url(../mediaStorage/nelsenCampbell.png); background-size: cover;"></div>
+                <div class="instructorName" style="position: absolute; top: 150px; font-size: 20px;">
+                    Nelsen Campbell
+                </div>
+                <div class="instructorDesc" style="width: 130px; position: absolute; top: 180px; font-size: 12px;
+                display: flex; flex-wrap: wrap; justify-content: center; text-align: center;">
+                    Trombone
+                </div>
+            </div>
+        
+            <div class="item" id="proj5" onmouseover="toTopOfStack(&#39;proj5&#39;)" style="z-index: 6;">
+                <div class="instructorPhoto" style="position: absolute; top: 20px; height: 100px; width: 100px;
+                background-image: url(../mediaStorage/mylesLawrence.png); background-size: cover;"></div>
+                <div class="instructorName" style="position: absolute; top: 150px; font-size: 20px;">
+                    Myles Lawrence
+                </div>
+                <div class="instructorDesc" style="width: 130px; position: absolute; top: 180px; font-size: 12px;
+                display: flex; flex-wrap: wrap; justify-content: center; text-align: center;">
+                    Saxophone &amp; Clarinet
+                </div>
+            </div>
+        
+            <div class="item" id="instructor6" onmouseover="toTopOfStack(&#39;instructor6&#39;)" style="right: 150px; z-index: 7;">
+                <div class="instructorPhoto" style="position: absolute; top: 20px; height: 100px; width: 100px;
+                background-image: url(../mediaStorage/meganCarson.png); background-size: cover;"></div>
+                <div class="instructorName" style="position: absolute; top: 150px; font-size: 20px;">
+                    Megan Carson
+                </div>
+                <div class="instructorDesc" style="width: 130px; position: absolute; top: 180px; font-size: 12px;
+                display: flex; flex-wrap: wrap; justify-content: center; text-align: center;">
+                    Voice
+                </div>
+            </div>
+        
+            <div class="item" id="instructor7" onmouseover="toTopOfStack(&#39;instructor7&#39;)" style="right: 300px; z-index: 8;">
+                <div class="instructorPhoto" style="position: absolute; top: 20px; height: 100px; width: 100px;
+                background-image: url(../mediaStorage/generic.png); background-size: cover;"></div>
+                <div class="instructorName" style="position: absolute; top: 150px; font-size: 20px;">
+                    Jordan Turner
+                </div>
+                <div class="instructorDesc" style="width: 130px; position: absolute; top: 180px; font-size: 12px;
+                display: flex; flex-wrap: wrap; justify-content: center; text-align: center;">
+                    Songwriting &amp; Music Production
+                </div>
+            </div>
+        
+            <div class="item" id="instructor8" onmouseover="toTopOfStack(&#39;instructor8&#39;)" style="right: 450px; z-index: 9;">
+                <div class="instructorPhoto" style="position: absolute; top: 20px; height: 100px; width: 100px;
+                background-image: url(../mediaStorage/mitchRomney.png); background-size: cover;"></div>
+                <div class="instructorName" style="position: absolute; top: 150px; font-size: 20px;">
+                    Mitch Romney
+                </div>
+                <div class="instructorDesc" style="width: 130px; position: absolute; top: 180px; font-size: 12px;
+                display: flex; flex-wrap: wrap; justify-content: center; text-align: center;">
+                    Drums
+                </div>
+            </div>
+        
+            <div class="item" id="instructor9" onmouseover="toTopOfStack(&#39;instructor9&#39;)" style="right: 600px; z-index: 8;">
+                <div class="instructorPhoto" style="position: absolute; top: 20px; height: 100px; width: 100px;
+                background-image: url(../mediaStorage/generic.png); background-size: cover;"></div>
+                <div class="instructorName" style="position: absolute; top: 150px; font-size: 20px;">
+                    Lauren Erickson
+                </div>
+                <div class="instructorDesc" style="width: 130px; position: absolute; top: 180px; font-size: 12px;
+                display: flex; flex-wrap: wrap; justify-content: center; text-align: center;">
+                    Flute
+                </div>
+            </div>
+        </div>
+                </div>
+            </div>
+            <div class="recommendSec">
+                <a href="https://www.summerhaysmusic.com/" target="_blank">
+                    <div class="storeLogo"></div>
+                </a>
+                <div class="storeText">
+                    Wondering where to buy or rent an instrument? Check out Summerhays, our favorite music store!
+                    <br>
+                    <br>
+                    www.summerhaysmusic.com
+                </div>
+            </div>
+            <div class="reviews">
+                <div class="stars"></div>
+                <div class="starsSubHead">
+                    We Maintain a Five Star Rating!
+                </div>
+                <div class="realReviews">
+                    
+                
+            <div class="singleReview" id="review1">
+                <div class="review">"We've been looking for a trombone teacher for my son for years. 
+    We finally found one we love! My son had marching band pass offs on Friday, 
+    but didn't get the music until Thursday afternoon. His teacher, in 30 
+    minutes, got him to memorize the whole song and taught him valuable lessons 
+    on memorization. I'm super impressed."</div>
+                <div class="reviewerName">- Amy Stoddard</div>
+                <div class="relationship">Student Parent</div>
+            </div>
+        
+            <div class="singleReview" id="review2">
+                <div class="review">"My daughter had learned so much taking piano lessons here! She's 
+    now writting her own music now too! We love it."</div>
+                <div class="reviewerName">- Hailey Allen</div>
+                <div class="relationship">Student Parent</div>
+            </div>
+        
+            <div class="singleReview" id="review3">
+                <div class="review">"We have loved Miles Ahead Music! We were looking for a saxophone 
+    instructor for our son and found Emily! We've been amazed at the progress 
+    he's made. She's helped him add emotion and style to his playing, he enjoys 
+    working with her and always comes home with great things to say!! Highly 
+    recommended!"</div>
+                <div class="reviewerName">- Keanna Zarate</div>
+                <div class="relationship">Student Parent</div>
+            </div>
+        </div>
+            </div>
+            <div class="footer">
+
+            </div>
+        </div>
+
+
+        
+        <div class="infoPop" id="pop1">
+            <div class="information">
+                Fall 2019 Enrollment Sale!<br><br>
+                Register Now and Save 15% on Lessons!
+                <div class="popBtn">
+                     Click here to get started!
+                </div>
+            </div>
+            <div class="exitBtn" onclick="hidePop()">
+                X
+            </div>
+        </div>
+
+        <div class="modalForm hidden" id="form">
+            <div class="modalFormBox">
+                Form coming soon...
+            </div>
+        </div>
+
+    
+</body></html>

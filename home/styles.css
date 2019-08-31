@@ -1,53 +1,281 @@
 @import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Julius+Sans+One|Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 
-
-
 /* Small Phone specs */
 
-@media (min-width: 500px){
-
-}
-
-
-
-
-
-
-
-/* Large Phone specs */
-
-@media (min-width: 700px){
-
-}
-
-
-
-
-
-
-
-/* Medium Screen or Tablet specs */
-
-@media (min-width: 1000px){
-
-}
-
-/* Large Screen specs */
-
-@media (min-width: 0px){
+/* Med Phone specs */
+@media screen and (min-width: 0px){
     html body {
         margin: 0;
         font-family: 'Quicksand', sans-serif;
-      }
-      html body .header {
+    }
+    html body .header {
+        height: 70px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        z-index: 999;
+    }
+    html body .header .logo {
+        height: 90px;
+        width: 90px;
+        position: absolute;
+        /* left: 5px;
+        top: 5px; */
+        background-image: url("../mediaStorage/milesAheadLogo.png");
+        background-size: cover;
+        transition: .3s;
+    }
+    html body .header .navSection {
+        height: 100%;
+        width: 75%;
+        position: absolute;
+        left: 25%;
+        display: flex;
+        align-items: center;
+    }
+    html body .header .navSection .navBtn {
+        font-family: 'Julius Sans One', sans-serif;
+        font-size: 15px;
+        text-align: center;
+        color: white;
+        /* margin-left: 10px; */
+        transition: .2s;
+        cursor: pointer;
+    }
+    html body .header .navSection .navBtn a {
+        text-decoration: none;
+        color: inherit;
+    }
+    html body .header .navSection .navBtn:hover {
+        transform: scale(1.05);
+        transition: .2s;
+    }
+    /* html body .header .navSection #aboutUs {
+
+    }
+    html body .header .navSection #lessonInfo {
+    
+    } */
+    html body .super {
+        height: 500px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+        z-index: 1;
+    }
+    html body .super #studioVid {
+       position: absolute;
+       height: 500px;
+    }
+    html body .content {
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+    }
+    html body .content .vidOverlay {
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+    html body .content .vidOverlay .sellPoint {
+        color: white;
+        font-family: 'Sacramento', cursive;
+        text-align: center;
+        text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px black;
+        margin-bottom: 50px
+    }
+    html body .content .vidOverlay .sellPoint .mainText {
+        font-size: 40px;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+    html body .content .vidOverlay .sellPoint .subText {
+        width: 200px;
+        margin: 0 auto;
+        font-size: 15px;
+        font-family: 'Julius Sans One', sans-serif;
+    }
+    html body .content .vidOverlay .enrollBtn {
+        height: 100px;
+        width: 200px;
+        font-family: 'Sacramento', cursive;
+        border-radius: 50px;
+        background-color: rgb(31, 29, 29);
+        color: white;
+        font-size: 30px;
+        text-shadow: 0 0 2px black;
+        box-shadow: 0 0 15px black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 450px;
+        transition: .2s;
+        cursor: pointer;
+    }
+    html body .content .vidOverlay .enrollBtn:hover {
+        transform: scale(1.05);
+        transition: .2s;
+    }
+    html body .content .missionStatement {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        margin-top: 100px;
+    }
+    html body .content .missionStatement .text {
+        width: 200px;
+        font-size: 15px;
+        color: rgb(56, 54, 54);
+        font-family: 'Quicksand', sans-serif;
+        text-align: center;
+    }
+    html body .content .instructorsHeading {
+        font-size: 35px;
+        font-family: "Sacramento", cursive;
+        text-align: center;
+        background-color: white;
+        margin-top: 50px;
+    }
+    html body .content .instructors {
+        height: 600px;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        overflow: hidden;
+    }
+    html body .content .instructors  .stackBox {
+        height: auto;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    html body .content .instructors .stackBox .item {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-shadow: 0 0 3px black;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: .2s;
+    }
+    html body .content .instructors .stackBox .item .instructorPhoto {
+
+    }
+    html body .content .instructors  .stackBox .item:hover {
+        transform: scale(1.2);
+    }
+    html body .content .recommendSec {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: rgb(31, 29, 29);
+    }
+    html body .content .recommendSec .storeLogo {
+        height: 180px;
+        width: 180px;
+        border-radius: 90px;
+        background-image: url("../mediaStorage/SummerhaysLogo.jpeg");
+        background-size: cover;
+        cursor: pointer;
+        transition: .2s;
+        margin: 0 auto;
+    }
+    html body .content .recommendSec .storeLogo:hover {
+        transform: scale(1.05);
+        transition: .2s;
+    }
+    html body .content .recommendSec .storeText {
+        width: 90%;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        margin-left: 5%;
+        margin-top: 20px;
+    }
+    html body .content .reviews {
+        height: 800px;
+        width: 100%;
+    }
+    html body .content .reviews .stars {
+        height: 50px;
+        width: 260px;
+        margin: 0 auto;
+        margin-top: 50px;
+        background-image: url("../mediaStorage/fiveStars.png");
+        background-size: cover;
+    }
+    html body .content .reviews .starsSubHead {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 20px;
+        font-family: 'Sacramento', cursive;
+    }
+    html body .content .reviews .realReviews {
+        margin-top: 50px;
+    }
+    html body .content .reviews .realReviews .singleReview {
+        height: 500px;
+        width: 90%;
+        color: white;
+        text-shadow: 0 0 5px black, 0 0 5px black, 0 0 10px black, 0 0 15px black, 0 0 20px black;
+        border-radius: 7px;
+        margin-left: 5%;
+        margin-bottom: 20px;
+        transition: .4s;
+    }
+    html body .content .reviews .realReviews .singleReview:hover {
+        transform: scale(1.15);
+        transition: .4s;
+    }
+    html body .content .reviews .realReviews #review1 {
+        background-image: url('../mediaStorage/studioPic1.jpg');
+        background-size: cover;
+    }
+    html body .content .reviews .realReviews #review2 {
+        background-image: url('../mediaStorage/studioPic2.jpg');
+        background-size: cover;
+    }
+    html body .content .reviews .realReviews #review3 {
+        background-image: url('../mediaStorage/studioPic3.jpg');
+        background-size: cover;
+    }
+}
+/* Large Phone specs */
+/* @media (min-width: 400px){
+
+} */
+/* Small Computer/Tablet specs */
+
+/* @media (min-width: 700px){
+
+} */
+
+/* Large Computer/Tablet specs */
+
+@media screen and (min-width: 700px){
+    html body {
+        margin: 0;
+        font-family: 'Quicksand', sans-serif;
+    }
+    html body .header {
         height: 100px;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.7);
         position: fixed;
         z-index: 999;
-      }
-      html body .header .logo {
+    }
+    html body .header .logo {
         height: 250px;
         width: 250px;
         position: absolute;
@@ -56,249 +284,245 @@
         background-image: url("../mediaStorage/milesAheadLogo.png");
         background-size: cover;
         transition: .3s;
-      }
-      html body .header .navSection {
-          height: 100%;
-          width: 70%;
-          position: absolute;
-          left: 25%;
-          display: flex;
-          align-items: center;
-      }
-      html body .header .navSection .navBtn {
-          font-family: 'Julius Sans One', sans-serif;
-          font-size: 30px;
-          color: white;
-          margin-left: 20px;
-          transition: .2s;
-          cursor: pointer;
-      }
-      html body .header .navSection .navBtn a {
-          text-decoration: none;
-          color: inherit;
-      }
-      html body .header .navSection .navBtn:hover {
-          transform: scale(1.05);
-          transition: .2s;
-      }
-      html body .header .navSection #aboutUs {
-          margin-left: 170px;
-      }
-      html body .header .navSection #lessonInfo {
-          margin-left: 200px;
-      }
-      html body .super {
-          height: 750px;
-          width: 100%;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          overflow: hidden;
-          z-index: 1;
-      }
-      html body .super #studioVid {
-          min-width: 100%;
-          min-height: 100%;
-          width: auto;
-          height: auto;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-      }
-      html body .content {
-          width: 100%;
-          position: absolute;
-          z-index: 2;
-      }
-      html body .content .vidOverlay {
-          height: 750px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          z-index: 2;
-      }
-      html body .content .vidOverlay .sellPoint {
-          height: 300px;
-          color: white;
-          font-family: 'Sacramento', cursive;
-          text-align: center;
-          text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px black;
-      }
-      html body .content .vidOverlay .sellPoint .mainText {
-          font-size: 80px;
-          margin-top: 100px;
-      }
-      html body .content .vidOverlay .sellPoint .subText {
-          font-size: 30px;
-          font-family: 'Julius Sans One', sans-serif;
-      }
-      html body .content .vidOverlay .enrollBtn {
-          height: 100px;
-          width: 200px;
-          font-family: 'Sacramento', cursive;
-          border-radius: 50px;
-          background-color: rgb(31, 29, 29);
-          color: white;
-          font-size: 30px;
-          text-shadow: 0 0 2px black;
-          box-shadow: 0 0 15px black;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          position: absolute;
-          top: 700px;
-          transition: .2s;
-          cursor: pointer;
-      }
-      html body .content .vidOverlay .enrollBtn:hover {
-          transform: scale(1.05);
-          transition: .2s;
-      }
-      html body .content .missionStatement {
-          height: 500px;
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: white;
-      }
-      html body .content .missionStatement .text {
-          width: 800px;
-          font-size: 30px;
-          color: rgb(56, 54, 54);
-          font-family: 'Quicksand', sans-serif;
-          text-align: center;
-      }
-      html body .content .instructorsHeading {
-          height: 100px;
-          font-size: 85px;
-          font-family: "Sacramento", cursive;
-          text-align: center;
-          background-color: white;
-      }
-      html body .content .instructors {
+    }
+    html body .header .navSection {
+        height: 100%;
+        width: 70%;
+        position: absolute;
+        left: 25%;
+        display: flex;
+        align-items: center;
+    }
+    html body .header .navSection .navBtn {
+        font-family: 'Julius Sans One', sans-serif;
+        font-size: 30px;
+        color: white;
+        margin-left: 20px;
+        transition: .2s;
+        cursor: pointer;
+    }
+    html body .header .navSection .navBtn a {
+        text-decoration: none;
+        color: inherit;
+    }
+    html body .header .navSection .navBtn:hover {
+        transform: scale(1.05);
+        transition: .2s;
+    }
+    html body .header .navSection #aboutUs {
+        margin-left: 170px;
+    }
+    html body .header .navSection #lessonInfo {
+        margin-left: 200px;
+    }
+    html body .super {
+        height: 750px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        overflow: hidden;
+        z-index: 1;
+    }
+    html body .super #studioVid {
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    html body .content {
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+    }
+    html body .content .vidOverlay {
+        height: 750px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+    html body .content .vidOverlay .sellPoint {
+        height: 300px;
+        color: white;
+        font-family: 'Sacramento', cursive;
+        text-align: center;
+        text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px black;
+    }
+    html body .content .vidOverlay .sellPoint .mainText {
+        font-size: 80px;
+        margin-top: 100px;
+    }
+    html body .content .vidOverlay .sellPoint .subText {
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Julius Sans One', sans-serif;
+    }
+    html body .content .vidOverlay .enrollBtn {
+        height: 100px;
+        width: 200px;
+        font-family: 'Sacramento', cursive;
+        border-radius: 50px;
+        background-color: rgb(31, 29, 29);
+        color: white;
+        font-size: 30px;
+        text-shadow: 0 0 2px black;
+        box-shadow: 0 0 15px black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 700px;
+        transition: .2s;
+        cursor: pointer;
+    }
+    html body .content .vidOverlay .enrollBtn:hover {
+        transform: scale(1.05);
+        transition: .2s;
+    }
+    html body .content .missionStatement {
+        height: 500px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+    html body .content .missionStatement .text {
+        width: 800px;
+        font-size: 30px;
+        color: rgb(56, 54, 54);
+        font-family: 'Quicksand', sans-serif;
+        text-align: center;
+    }
+    html body .content .instructorsHeading {
+        height: 100px;
+        font-size: 85px;
+        font-family: "Sacramento", cursive;
+        text-align: center;
+        background-color: white;
+    }
+    html body .content .instructors {
         height: 600px;
         display: flex;
         align-items: center;
         background-color: white;
-        overflow: hidden;
-      }
-      html body .content .instructors .stackBoxSection {
-          height: 400px;
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
-      html body .content .instructors .stackBoxSection .stackBox {
-          height: 400px;
-          display: flex;
-          justify-content: center;
-      }
-      html body .content .instructors .stackBoxSection .stackBox .item {
-          height: 400px;
-          width: 250px;
-          position: relative;
-          background-image: linear-gradient(to right, rgb(56, 53, 53), rgb(31, 29, 29));
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: white;
-          text-shadow: 0 0 3px black;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: .2s;
-      }
-      html body .content .instructors .stackBoxSection .stackBox .item:hover {
-          transform: scale(1.3);
-      }
-      html body .content .recommendSec {
-          height: 500px;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: rgb(31, 29, 29);
-      }
-      html body .content .recommendSec .storeLogo {
-          height: 180px;
-          width: 180px;
-          border-radius: 90px;
-          background-image: url("../mediaStorage/SummerhaysLogo.jpeg");
-          background-size: cover;
-          cursor: pointer;
-          transition: .2s;
-      }
-      html body .content .recommendSec .storeLogo:hover {
-          transform: scale(1.05);
-          transition: .2s;
-      }
-      html body .content .recommendSec .storeText {
-          width: 400px;
-          margin-left: 70px;
-          color: white;
-          font-size: 20px;
-      }
-      html body .content .reviews {
-          height: 800px;
-          width: 100%;
-      }
-      html body .content .reviews .stars {
-          height: 50px;
-          width: 260px;
-          margin: 0 auto;
-          margin-top: 50px;
-          background-image: url("../mediaStorage/fiveStars.png");
-          background-size: cover;
-      }
-      html body .content .reviews .starsSubHead {
-          text-align: center;
-          margin-top: 20px;
-          font-size: 35px;
-          font-family: 'Sacramento', cursive;
-      }
-      html body .content .reviews .realReviews {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-top: 50px;
-      }
-      html body .content .reviews .realReviews .singleReview {
-          height: 500px;
-          width: 300px;
-          color: white;
-          text-shadow: 0 0 5px black, 0 0 5px black, 0 0 10px black, 0 0 15px black, 0 0 20px black;
-          border-radius: 7px;
-          margin: 20px;
-          transition: .4s;
-      }
-      html body .content .reviews .realReviews .singleReview:hover {
-          transform: scale(1.15);
-          transition: .4s;
-      }
-      html body .content .reviews .realReviews #review1 {
+    }
+    html body .content .instructors .stackBox {
+        height: 400px;
+        width: 100%;
+        position: relative;
+    }
+    html body .content .instructors .stackBox .item {
+        height: 400px;
+        width: 250px;
+        position: absolute;
+        background-image: linear-gradient(to right, rgb(56, 53, 53), rgb(31, 29, 29));
+        display: flex;
+        justify-content: center;
+        color: white;
+        text-shadow: 0 0 3px black;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: .2s;
+    }
+    html body .content .instructors .stackBox .item .instructorPhoto {
+
+    }
+    html body .content .instructors .stackBox .item:hover {
+        transform: scale(1.2);
+    }
+    html body .content .recommendSec {
+        height: 500px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(31, 29, 29);
+    }
+    html body .content .recommendSec .storeLogo {
+        height: 180px;
+        width: 180px;
+        border-radius: 90px;
+        background-image: url("../mediaStorage/SummerhaysLogo.jpeg");
+        background-size: cover;
+        cursor: pointer;
+        transition: .2s;
+    }
+    html body .content .recommendSec .storeLogo:hover {
+        transform: scale(1.05);
+        transition: .2s;
+    }
+    html body .content .recommendSec .storeText {
+        width: 400px;
+        margin-left: 70px;
+        color: white;
+        font-size: 20px;
+    }
+    html body .content .reviews {
+        height: 800px;
+        width: 100%;
+    }
+    html body .content .reviews .stars {
+        height: 50px;
+        width: 260px;
+        margin: 0 auto;
+        margin-top: 50px;
+        background-image: url("../mediaStorage/fiveStars.png");
+        background-size: cover;
+    }
+    html body .content .reviews .starsSubHead {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 35px;
+        font-family: 'Sacramento', cursive;
+    }
+    html body .content .reviews .realReviews {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+    html body .content .reviews .realReviews .singleReview {
+        height: 500px;
+        width: 300px;
+        color: white;
+        text-shadow: 0 0 5px black, 0 0 5px black, 0 0 10px black, 0 0 15px black, 0 0 20px black;
+        border-radius: 7px;
+        margin: 20px;
+        transition: .4s;
+    }
+    html body .content .reviews .realReviews .singleReview:hover {
+        transform: scale(1.15);
+        transition: .4s;
+    }
+    html body .content .reviews .realReviews #review1 {
         background-image: url('../mediaStorage/studioPic1.jpg');
         background-size: cover;
-      }
-      html body .content .reviews .realReviews #review2 {
+    }
+    html body .content .reviews .realReviews #review2 {
         background-image: url('../mediaStorage/studioPic2.jpg');
         background-size: cover;
-      }
-      html body .content .reviews .realReviews #review3 {
+    }
+    html body .content .reviews .realReviews #review3 {
         background-image: url('../mediaStorage/studioPic3.jpg');
         background-size: cover;
-      }
-      html body .content .reviews .realReviews .singleReview .reviewerName {
+    }
+    html body .content .reviews .realReviews .singleReview .reviewerName {
         font-size: 25px;
         text-align: center;
         margin-top: 20px;
-      }
-      html body .content .reviews .realReviews .singleReview .relationship {
+    }
+    html body .content .reviews .realReviews .singleReview .relationship {
         font-size: 18px;
         text-align: center;
-      }
-      html body .content .reviews .realReviews .singleReview .review {
+    }
+    html body .content .reviews .realReviews .singleReview .review {
         font-size: 16px;
         height: 70%;
         text-align: center;
@@ -307,61 +531,61 @@
         margin-top: 10px;
         display: flex;
         align-items: center;
-      }
-      html body .content .footer {
-          height: 70px;
-          width: 100%;
-          background-color: rgb(31, 29, 29);
-          z-index: 3;
-      }
-      html body .infoPop {
-          position: fixed;
-          color: white;
-          height: 300px;
-          width: 300px;
-          top: calc(100% - 320px);
-          left: calc(100% - 320px);
-          background-color: rgba(0, 0, 0, 0.95);
-          border-top-left-radius: 50px;
-          border-top-right-radius: 50px;
-          border-bottom-left-radius: 50px;
-          z-index: 1000;
-          transition: .2s;
-      }
-      /* html body .infoPop:hover {
-          transform: scale(1.05);
-          transition: .2s;
-      } */
-      html body .infoPop .exitBtn {
-          position: absolute;
-          right: 30px;
-          top: 30px;
-          cursor: pointer;
-      }
-      html body .infoPop .information {
-          position: absolute;
-          top: 100px;
-          left: 20px;
-      }
-      html body .infoPop .information .popBtn {
-          position: absolute;
-          right: 50px;
-          top: 100px;
-          height: 50px;
-          width: 150px;
-          padding-left: 25px;
-          padding-right: 25px;
-          background-color: white;
-          border-radius: 25px;
-          color: black;
-          text-align: center;
-          transition: .2s;
-      }
-      html body .infoPop .information .popBtn:hover {
-          transform: scale(1.05);
-          transition: .2s;
-      }
-      html body .modalForm {
+    }
+    html body .content .footer {
+        height: 70px;
+        width: 100%;
+        background-color: rgb(31, 29, 29);
+        z-index: 3;
+    }
+    html body .infoPop {
+        position: fixed;
+        color: white;
+        height: 300px;
+        width: 300px;
+        top: calc(100% - 320px);
+        left: calc(100% - 320px);
+        background-color: rgba(0, 0, 0, 0.95);
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        z-index: 1000;
+        transition: .2s;
+    }
+    /* html body .infoPop:hover {
+        transform: scale(1.05);
+        transition: .2s;
+    } */
+    html body .infoPop .exitBtn {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        cursor: pointer;
+    }
+    html body .infoPop .information {
+        position: absolute;
+        top: 100px;
+        left: 20px;
+    }
+    html body .infoPop .information .popBtn {
+        position: absolute;
+        right: 50px;
+        top: 100px;
+        height: 50px;
+        width: 150px;
+        padding-left: 25px;
+        padding-right: 25px;
+        background-color: white;
+        border-radius: 25px;
+        color: black;
+        text-align: center;
+        transition: .2s;
+    }
+    html body .infoPop .information .popBtn:hover {
+        transform: scale(1.05);
+        transition: .2s;
+    }
+    html body .modalForm {
         position: fixed;
         height: 100%;
         width: 100%;
@@ -378,7 +602,7 @@
         color: white;
         font-size: 20px;
     }
-      html body .hidden {
-          display: none;
-      }
+    html body .hidden {
+        display: none;
+    }
 }
