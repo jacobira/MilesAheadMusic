@@ -144,16 +144,13 @@
         margin-top: 50px;
     }
     html body .content .instructors {
-        height: 600px;
         display: flex;
         align-items: center;
         background-color: white;
-        overflow: hidden;
     }
     html body .content .instructors  .stackBox {
         height: auto;
         width: 100%;
-        overflow: hidden;
         display: flex;
         justify-content: center;
         position: relative;
@@ -173,7 +170,7 @@
 
     }
     html body .content .instructors  .stackBox .item:hover {
-        transform: scale(1.2);
+        transform: scale(1.0);
     }
     html body .content .recommendSec {
         width: 100%;
@@ -351,7 +348,7 @@
         color: white;
         font-family: 'Sacramento', cursive;
         text-align: center;
-        text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px black;
+        text-shadow: 0 0 5px black, 0 0 5px black, 0 0 5px black, 0 0 10px black, 0 0 10px black, 0 0 15px black, 0 0 15px, 0 0 15px black black;
     }
     html body .content .vidOverlay .sellPoint .mainText {
         font-size: 80px;

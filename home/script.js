@@ -80,12 +80,13 @@ var reviews = [{
     recommended!`
 }];
 
-createPortfolioStack(portfolio.length/2);
+createPortfolioStack();
 populateReviews();
 displayPop();
 
 window.onscroll = function(){
     growShrinkLogo();
+    mobileScrollStackCheck();
 }
 window.onresize = function(){
     createPortfolioStack();
@@ -197,8 +198,8 @@ function createPortfolioStack(){
             `);
     
             //POSITIONING OF ITEMS ON PAGE::
-            $('.instructors').css('height', `${210 * portfolio.length}px`);
-            $('.stackBox').css('height', `${200 * portfolio.length}px`);
+            $('.instructors').css('height', `${240 * portfolio.length}px`);
+            $('.stackBox').css('height', `${220 * portfolio.length}px`);
             $('#' + portfolio[i].id + '').css({'height':'400px', 'width':'80%', 'right':'10%', 'top':`${200 * i}px`,
             'background-image':'linear-gradient(rgb(56, 53, 53), rgb(31, 29, 29))'});
 
@@ -207,10 +208,21 @@ function createPortfolioStack(){
             indexCounter--;
         }
     }
-    
-    
-    
-    
+}
+function mobileScrollStackCheck(){
+    for(let i=0; i<portfolio.length; i++){
+        let instructorStartMark = 800;
+        let cardHalfHeight = 200;
+        let card = document.getElementById(portfolio[i].id);
+
+        if(document.documentElement.scrollTop > (instructorStartMark + (cardHalfHeight * i)) && 
+        document.documentElement.scrollTop < (instructorStartMark + (cardHalfHeight * (i + 1)))){
+            card.style.transform = "scale(1.2)";
+            toTopOfStack(portfolio[i].id);
+        } else {
+            card.style.transform = "scale(1.0)";
+        }
+    }
 }
 function toTopOfStack(boxId){
     for (let i = 0; i < portfolio.length; i++){
