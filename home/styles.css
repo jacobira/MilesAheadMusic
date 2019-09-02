@@ -167,7 +167,7 @@
         transition: .2s;
     }
     html body .content .instructors .stackBox .scaled {
-        transform: scale(1.02);
+        transform: scale(1.2);
         transition: .2s;
     }
     html body .content .instructors .stackBox .item .instructorPhoto {
