@@ -220,16 +220,28 @@ function mobileScrollStackCheck(){
         let cardHalfHeight = 200;
         let card = document.getElementById(portfolio[i].id);
 
-        if(document.documentElement.scrollTop > (instructorStartMark + (cardHalfHeight * i)) || document.body.scrollTop > (instructorStartMark + (cardHalfHeight * i))){
-            if(document.documentElement.scrollTop < (instructorStartMark + (cardHalfHeight * (i + 1))) || document.body.scrollTop < (instructorStartMark + (cardHalfHeight * (i + 1)))){
-                card.classList.add("scaled");
-                for(let a=0; a<portfolio.length; a++){
-                    if(a !== i){
-                        document.getElementById(portfolio[a].id).classList.remove("scaled");
-                    }
+        // if(document.documentElement.scrollTop > (instructorStartMark + (cardHalfHeight * i)) || document.body.scrollTop > (instructorStartMark + (cardHalfHeight * i))){
+        //     if(document.documentElement.scrollTop < (instructorStartMark + (cardHalfHeight * (i + 1))) || document.body.scrollTop < (instructorStartMark + (cardHalfHeight * (i + 1)))){
+        //         toTopOfStack(portfolio[i].id);
+        //         card.classList.add("scaled");
+        //         for(let a=0; a<portfolio.length; a++){
+        //             if(a !== i){
+        //                 document.getElementById(portfolio[a].id).classList.remove("scaled");
+        //             }
+        //         }
+        //     } 
+        // } 
+
+        let rect = card.getBoundingClientRect();
+        if(rect.top >= 0 && rect.left >= 0 && rect.bottom <=(window.innerHeight || document.documentElement.clientHeight) && 
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)){
+            toTopOfStack(portfolio[i].id);
+            card.classList.add("scaled");
+            for(let a=0; a<portfolio.length; a++){
+                if(a !== i){
+                    document.getElementById(portfolio[a].id).classList.remove("scaled");
                 }
-                toTopOfStack(portfolio[i].id);
-            } 
+            }
         } 
     }
 }
