@@ -216,9 +216,9 @@ function createPortfolioStack(){
             `);
     
             //POSITIONING OF ITEMS ON PAGE::
-            $('.instructors').css('height', `calc(35vh * ${portfolio.length})`);
-            $('.stackBox').css('height', `calc(30vh * ${portfolio.length})`);
-            $('#' + portfolio[i].id + '').css({'height':'80vh', 'width':'80%', 'right':'10%', 'top':`${200 * i}px`,
+            $('.instructors').css('height', `${portfolio.length * 50}vh`);
+            $('.stackBox').css('height', `${portfolio.length * 45}vh`);
+            $('#' + portfolio[i].id + '').css({'height':'80vh', 'width':'80%', 'right':'10%', 'top':`${40 * i}vh`,
             'background-image':'linear-gradient(rgb(56, 53, 53), rgb(31, 29, 29))'});
 
             // assigning of z-index values to each project:
