@@ -348,7 +348,7 @@
         color: white;
         font-family: 'Sacramento', cursive;
         text-align: center;
-        text-shadow: 0 0 5px black, 0 0 5px black, 0 0 5px black, 0 0 10px black, 0 0 10px black, 0 0 15px black, 0 0 15px, 0 0 15px black black;
+        text-shadow: 0 0 5px black, 0 0 5px black, 0 0 5px black, 0 0 10px black, 0 0 10px black, 0 0 15px black, 0 0 15px, 0 0 15px black;
     }
     html body .content .vidOverlay .sellPoint .mainText {
         font-size: 80px;

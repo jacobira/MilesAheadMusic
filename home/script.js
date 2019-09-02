@@ -86,7 +86,9 @@ displayPop();
 
 window.onscroll = function(){
     growShrinkLogo();
-    mobileScrollStackCheck();
+    if(window.innerWidth < 500){
+        mobileScrollStackCheck();
+    }
 }
 window.onresize = function(){
     createPortfolioStack();
@@ -128,7 +130,7 @@ function createPortfolioStack(){
     var cardHalfMark = 125;
     var indexCounter = portfolio.length;
 
-    if(window.innerWidth >= 1300){
+    if(window.innerWidth >= 900){
         for(let i=0; i<portfolio.length; i++){
             let projectId = portfolio[i].id;
             $('#stackBox').append(`
@@ -179,7 +181,7 @@ function createPortfolioStack(){
         // adjusting z-index values to front-face current mouseover item
     }
 
-    if(window.innerWidth < 1300){
+    if(window.innerWidth < 900){
 
         for(let i=0; i<portfolio.length; i++){
             let projectId = portfolio[i].id;
@@ -211,7 +213,7 @@ function createPortfolioStack(){
 }
 function mobileScrollStackCheck(){
     for(let i=0; i<portfolio.length; i++){
-        let instructorStartMark = 800;
+        let instructorStartMark = 730;
         let cardHalfHeight = 200;
         let card = document.getElementById(portfolio[i].id);
 
@@ -245,8 +247,8 @@ function toTopOfStack(boxId){
 }
 function growShrinkLogo(){
     var logo = document.getElementById("logo");
-    if (window.innerWidth < 500){
-        if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75){
+    if (window.innerWidth < 700){
+        if (document.documentElement.scrollTop > 75){
             logo.style.width = "70px";
             logo.style.height = "70px";
             logo.style.top = "0px";
@@ -257,7 +259,7 @@ function growShrinkLogo(){
         }
     }
     else {
-        if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75){
+        if (document.documentElement.scrollTop > 75){
             logo.style.width = "100px";
             logo.style.height = "100px";
             logo.style.top = "0px";
