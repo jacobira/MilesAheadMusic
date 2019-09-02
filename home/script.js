@@ -215,6 +215,7 @@ function createPortfolioStack(){
 }
 function mobileScrollStackCheck(){
     for(let i=0; i<portfolio.length; i++){
+
         let instructorStartMark = 730;
         let cardHalfHeight = 200;
         let card = document.getElementById(portfolio[i].id);
@@ -222,12 +223,14 @@ function mobileScrollStackCheck(){
         if(document.documentElement.scrollTop > (instructorStartMark + (cardHalfHeight * i)) || document.body.scrollTop > (instructorStartMark + (cardHalfHeight * i))){
             if(document.documentElement.scrollTop < (instructorStartMark + (cardHalfHeight * (i + 1))) || document.body.scrollTop < (instructorStartMark + (cardHalfHeight * (i + 1)))){
                 card.classList.add("scaled");
+                for(let a=0; a<portfolio.length; a++){
+                    if(a !== i){
+                        document.getElementById(portfolio[a].id).classList.remove("scaled");
+                    }
+                }
                 toTopOfStack(portfolio[i].id);
             } 
-        } else {
-            card.classList.remove("scaled");
-            console.log('else triggered');
-        }
+        } 
     }
 }
 function toTopOfStack(boxId){
