@@ -161,6 +161,7 @@
         justify-content: center;
         align-items: center;
         color: white;
+        text-align: center;
         text-shadow: 0 0 3px black;
         border-radius: 5px;
         cursor: pointer;
@@ -170,7 +171,14 @@
         transform: scale(1.2);
     }
     html body .content .instructors .stackBox .item .instructorPhoto {
-
+        height: 100px;
+        width: 100px;
+        background-size: cover;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    html body .content .instructors .stackBox .item .instructorBio {
+        margin-top: 20px;
     }
     html body .content .recommendSec {
         width: 100%;
@@ -422,14 +430,23 @@
         background-image: linear-gradient(to right, rgb(56, 53, 53), rgb(31, 29, 29));
         display: flex;
         justify-content: center;
+        align-items: center;
         color: white;
+        text-align: center;
         text-shadow: 0 0 3px black;
         border-radius: 5px;
         cursor: pointer;
         transition: .2s;
     }
     html body .content .instructors .stackBox .item .instructorPhoto {
-
+        height: 100px;
+        width: 100px;
+        background-size: cover;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    html body .content .instructors .stackBox .item .instructorBio {
+        margin-top: 20px;
     }
     html body .content .instructors .stackBox .item:hover {
         transform: scale(1.2);

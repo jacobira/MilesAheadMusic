@@ -1,48 +1,56 @@
 var portfolio = [{
     "name":"Madison Moline",
     "basicDes":"Viola & Violin",
+    "bio": "Bacon ipsum dolor amet kevin beef tri-tip swine. Ground round tenderloin bresaola, porchetta burgdoggen tri-tip shankle chuck andouille salami pastrami hamburger. Beef brisket cow, rump chicken capicola filet mignon bacon alcatra shank boudin sirloin pastrami turkey.",
     "id":"instructor1",
     "photo":"../mediaStorage/madisonMoline.png"
 },
 {
     "name":"Jason Fullmer",
     "basicDes":"Guitar, Ukulele, Banjo & Mandolin",
+    "bio": "Bacon ipsum dolor amet kevin beef tri-tip swine. Ground round tenderloin bresaola, porchetta burgdoggen tri-tip shankle chuck andouille salami pastrami hamburger. Beef brisket cow, rump chicken capicola filet mignon bacon alcatra shank boudin sirloin pastrami turkey.",
     "id":"instructor2",
     "photo":"../mediaStorage/jasonFullmer.png"
 },
 {
     "name":"Austie Robinson",
     "basicDes":"Trumpet",
+    "bio": "Bacon ipsum dolor amet kevin beef tri-tip swine. Ground round tenderloin bresaola, porchetta burgdoggen tri-tip shankle chuck andouille salami pastrami hamburger. Beef brisket cow, rump chicken capicola filet mignon bacon alcatra shank boudin sirloin pastrami turkey.",
     "id":"instructor3",
     "photo":"../mediaStorage/austieRobinson.png"
 },
 {
     "name":"Nelsen Campbell",
     "basicDes":"Trombone",
+    "bio": "Bacon ipsum dolor amet kevin beef tri-tip swine. Ground round tenderloin bresaola, porchetta burgdoggen tri-tip shankle chuck andouille salami pastrami hamburger. Beef brisket cow, rump chicken capicola filet mignon bacon alcatra shank boudin sirloin pastrami turkey.",
     "id":"instructor4",
     "photo":"../mediaStorage/nelsenCampbell.png"
 },
 {
     "name":"Myles Lawrence",
     "basicDes":"Saxophone & Clarinet",
+    "bio": "Bacon ipsum dolor amet kevin beef tri-tip swine. Ground round tenderloin bresaola, porchetta burgdoggen tri-tip shankle chuck andouille salami pastrami hamburger. Beef brisket cow, rump chicken capicola filet mignon bacon alcatra shank boudin sirloin pastrami turkey.",
     "id":"instructor5",
     "photo":"../mediaStorage/mylesLawrence.png"
 },
 {
     "name":"Megan Carson",
     "basicDes":"Voice",
+    "bio": "Bacon ipsum dolor amet kevin beef tri-tip swine. Ground round tenderloin bresaola, porchetta burgdoggen tri-tip shankle chuck andouille salami pastrami hamburger. Beef brisket cow, rump chicken capicola filet mignon bacon alcatra shank boudin sirloin pastrami turkey.",
     "id":"instructor6",
     "photo":"../mediaStorage/meganCarson.png"
 },
 {
     "name":"Jordan Turner",
     "basicDes":"Songwriting & Music Production",
+    "bio": "Bacon ipsum dolor amet kevin beef tri-tip swine. Ground round tenderloin bresaola, porchetta burgdoggen tri-tip shankle chuck andouille salami pastrami hamburger. Beef brisket cow, rump chicken capicola filet mignon bacon alcatra shank boudin sirloin pastrami turkey.",
     "id":"instructor7",
     "photo":"../mediaStorage/generic.png"
 },
 {
     "name":"Mitch Romney",
     "basicDes":"Drums",
+    "bio": "Bacon ipsum dolor amet kevin beef tri-tip swine. Ground round tenderloin bresaola, porchetta burgdoggen tri-tip shankle chuck andouille salami pastrami hamburger. Beef brisket cow, rump chicken capicola filet mignon bacon alcatra shank boudin sirloin pastrami turkey.",
     "id":"instructor8",
     "photo":"../mediaStorage/mitchRomney.png"
 }
@@ -50,6 +58,7 @@ var portfolio = [{
 {
     "name":"Lauren Erickson",
     "basicDes":"Flute",
+    "bio": "Bacon ipsum dolor amet kevin beef tri-tip swine. Ground round tenderloin bresaola, porchetta burgdoggen tri-tip shankle chuck andouille salami pastrami hamburger. Beef brisket cow, rump chicken capicola filet mignon bacon alcatra shank boudin sirloin pastrami turkey.",
     "id":"instructor9",
     "photo":"../mediaStorage/generic.png"
 }
@@ -189,22 +198,27 @@ function createPortfolioStack(){
             let projectId = portfolio[i].id;
             $('#stackBox').append(`
                 <div class="item" id=${projectId} onmouseover="toTopOfStack('${projectId}')">
-                    <div class="instructorPhoto" style="background-image: url(${portfolio[i].photo});">
-                    
-                    </div>
-                    <div class="instructorName">
-                        ${portfolio[i].name}
-                    </div>
-                    <div class="instructorDesc">
-                        ${portfolio[i].basicDes}
+                    <div>
+                        <div class="instructorPhoto" style="background-image: url(${portfolio[i].photo});">
+                        
+                        </div>
+                        <div class="instructorName">
+                            ${portfolio[i].name}
+                        </div>
+                        <div class="instructorDesc">
+                            ${portfolio[i].basicDes}
+                        </div>
+                        <div class="instructorBio">
+                            ${portfolio[i].bio}
+                        </div>
                     </div>
                 </div>
             `);
     
             //POSITIONING OF ITEMS ON PAGE::
-            $('.instructors').css('height', `${240 * portfolio.length}px`);
-            $('.stackBox').css('height', `${220 * portfolio.length}px`);
-            $('#' + portfolio[i].id + '').css({'height':'400px', 'width':'80%', 'right':'10%', 'top':`${200 * i}px`,
+            $('.instructors').css('height', `calc(35vh * ${portfolio.length})`);
+            $('.stackBox').css('height', `calc(30vh * ${portfolio.length})`);
+            $('#' + portfolio[i].id + '').css({'height':'80vh', 'width':'80%', 'right':'10%', 'top':`${200 * i}px`,
             'background-image':'linear-gradient(rgb(56, 53, 53), rgb(31, 29, 29))'});
 
             // assigning of z-index values to each project:
@@ -220,18 +234,6 @@ function mobileScrollStackCheck(){
         let cardHalfHeight = 200;
         let card = document.getElementById(portfolio[i].id);
 
-        // if(document.documentElement.scrollTop > (instructorStartMark + (cardHalfHeight * i)) || document.body.scrollTop > (instructorStartMark + (cardHalfHeight * i))){
-        //     if(document.documentElement.scrollTop < (instructorStartMark + (cardHalfHeight * (i + 1))) || document.body.scrollTop < (instructorStartMark + (cardHalfHeight * (i + 1)))){
-        //         toTopOfStack(portfolio[i].id);
-        //         card.classList.add("scaled");
-        //         for(let a=0; a<portfolio.length; a++){
-        //             if(a !== i){
-        //                 document.getElementById(portfolio[a].id).classList.remove("scaled");
-        //             }
-        //         }
-        //     } 
-        // } 
-
         let rect = card.getBoundingClientRect();
         if(rect.top >= 0 && rect.left >= 0 && rect.bottom <=(window.innerHeight || document.documentElement.clientHeight) && 
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)){
@@ -246,9 +248,9 @@ function mobileScrollStackCheck(){
     }
 }
 function toTopOfStack(boxId){
+    $('#' + boxId + '').css('z-index', `${portfolio.length}`);
     for (let i = 0; i < portfolio.length; i++){
         if (portfolio[i].id === boxId){
-            $('#' + portfolio[i].id + '').css('z-index', `${portfolio.length}`);
             let lowIndexCounter = 1;
             let highIndexCounter = portfolio.length - 1;
             for (let a = 0; a < portfolio.length; a++){
@@ -261,6 +263,7 @@ function toTopOfStack(boxId){
                     highIndexCounter--;
                 }
             }
+            break;
         }
     }
 }
