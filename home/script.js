@@ -84,6 +84,8 @@ createPortfolioStack();
 populateReviews();
 displayPop();
 
+const scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop)
+
 window.onscroll = function(){
     growShrinkLogo();
     if(window.innerWidth < 500){
@@ -217,12 +219,14 @@ function mobileScrollStackCheck(){
         let cardHalfHeight = 200;
         let card = document.getElementById(portfolio[i].id);
 
-        if(document.documentElement.scrollTop > (instructorStartMark + (cardHalfHeight * i)) && 
-        document.documentElement.scrollTop < (instructorStartMark + (cardHalfHeight * (i + 1)))){
-            card.style.transform = "scale(1.2)";
-            toTopOfStack(portfolio[i].id);
+        if(document.documentElement.scrollTop > (instructorStartMark + (cardHalfHeight * i)) || document.body.scrollTop > (instructorStartMark + (cardHalfHeight * i))){
+            if(document.documentElement.scrollTop < (instructorStartMark + (cardHalfHeight * (i + 1))) || document.body.scrollTop < (instructorStartMark + (cardHalfHeight * (i + 1)))){
+                card.classList.add("scaled");
+                toTopOfStack(portfolio[i].id);
+            } 
         } else {
-            card.style.transform = "scale(1.0)";
+            card.classList.remove("scaled");
+            console.log('else triggered');
         }
     }
 }
@@ -248,7 +252,7 @@ function toTopOfStack(boxId){
 function growShrinkLogo(){
     var logo = document.getElementById("logo");
     if (window.innerWidth < 700){
-        if (document.documentElement.scrollTop > 75){
+        if (document.documentElement.scrollTop || document.body.scrollTop > 75){
             logo.style.width = "70px";
             logo.style.height = "70px";
             logo.style.top = "0px";
@@ -259,7 +263,7 @@ function growShrinkLogo(){
         }
     }
     else {
-        if (document.documentElement.scrollTop > 75){
+        if (document.documentElement.scrollTop || document.body.scrollTop > 75){
             logo.style.width = "100px";
             logo.style.height = "100px";
             logo.style.top = "0px";

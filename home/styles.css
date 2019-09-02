@@ -166,6 +166,10 @@
         cursor: pointer;
         transition: .2s;
     }
+    html body .content .instructors .stackBox .scaled {
+        transform: scale(1.02);
+        transition: .2s;
+    }
     html body .content .instructors .stackBox .item .instructorPhoto {
 
     }
