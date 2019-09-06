@@ -209,7 +209,6 @@
         margin-top: 20px;
     }
     html body .content .reviews {
-        height: 800px;
         width: 100%;
     }
     html body .content .reviews .stars {
@@ -243,6 +242,25 @@
         transform: scale(1.15);
         transition: .4s;
     }
+    html body .content .reviews .realReviews .singleReview .reviewerName {
+        font-size: 25px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    html body .content .reviews .realReviews .singleReview .review {
+        font-size: 20px;
+        height: 70%;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+    }
+    html body .content .reviews .realReviews .singleReview .relationship {
+        font-size: 18px;
+        text-align: center;
+    }
     html body .content .reviews .realReviews #review1 {
         background-image: url('../mediaStorage/studioPic1.jpg');
         background-size: cover;
@@ -254,6 +272,12 @@
     html body .content .reviews .realReviews #review3 {
         background-image: url('../mediaStorage/studioPic3.jpg');
         background-size: cover;
+    }
+    html body .content .footer {
+        height: 70px;
+        width: 100%;
+        background-color: rgb(31, 29, 29);
+        z-index: 3;
     }
 }
 /* Large Phone specs */
