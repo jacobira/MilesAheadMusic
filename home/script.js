@@ -104,9 +104,15 @@ window.onscroll = function(){
 window.onresize = function(){
     createPortfolioStack();
 }
+function displayBio(id){
+    document.getElementById("form").innerHTML = "";
+    document.getElementById("form").classList.remove("hidden");
+}
 
 function displayForm(){
+    document.getElementById("modalContent").innerHTML = "";
     document.getElementById("form").classList.remove("hidden");
+    // ....
 }
 function closeForm(){
     document.getElementById("form").classList.add("hidden");
@@ -117,6 +123,23 @@ function displayPop(){
         document.getElementById('pop1').classList.remove('hidden');
     }, 4000);
 }
+
+function displayBio(givenId){
+    document.getElementById("modalContent").innerHTML = "";
+    document.getElementById('form').classList.remove('hidden');
+    console.log(givenId);
+    for(let i=0; i<portfolio.length; i++){
+        if(portfolio[i].id == givenId){
+            document.getElementById("modalContent").innerHTML = portfolio[i].bio;
+            console.log(portfolio[i].bio);
+        }
+    }
+}
+
+function exitModal(){
+    document.getElementById("form").classList.add('hidden');
+}
+
 
 function hidePop(){
     document.getElementById('pop1').classList.add('hidden');
@@ -146,14 +169,19 @@ function createPortfolioStack(){
             let projectId = portfolio[i].id;
             $('#stackBox').append(`
                 <div class="item" id=${projectId} onmouseover="toTopOfStack('${projectId}')">
-                    <div class="instructorPhoto" style="background-image: url(${portfolio[i].photo});">
-                    
-                    </div>
-                    <div class="instructorName">
-                        ${portfolio[i].name}
-                    </div>
-                    <div class="instructorDesc">
-                        ${portfolio[i].basicDes}
+                    <div>
+                        <div class="instructorPhoto" style="background-image: url(${portfolio[i].photo});">
+                        
+                        </div>
+                        <div class="instructorName">
+                            ${portfolio[i].name}
+                        </div>
+                        <div class="instructorDesc">
+                            ${portfolio[i].basicDes}
+                        </div>
+                        <div class="seeBioBtn" onclick="displayBio(${projectId})">
+                        
+                        </div>
                     </div>
                 </div>
             `);
@@ -208,8 +236,8 @@ function createPortfolioStack(){
                         <div class="instructorDesc">
                             ${portfolio[i].basicDes}
                         </div>
-                        <div class="instructorBio">
-                            ${portfolio[i].bio}
+                        <div class="seeBioBtn" onclick="displayBio('${projectId}')">
+                            
                         </div>
                     </div>
                 </div>
