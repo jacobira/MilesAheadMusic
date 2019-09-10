@@ -179,7 +179,7 @@ function createPortfolioStack(){
                         <div class="instructorDesc">
                             ${portfolio[i].basicDes}
                         </div>
-                        <div class="seeBioBtn" onclick="displayBio(${projectId})">
+                        <div class="seeBioBtn" onclick="displayBio('${projectId}')">
                         
                         </div>
                     </div>
