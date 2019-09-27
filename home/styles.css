@@ -33,10 +33,12 @@
         left: 25%;
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
     html body .header .navSection .navBtn {
+        width: 100px;
         font-family: 'Julius Sans One', sans-serif;
-        font-size: 18px;
+        font-size: 21px;
         text-align: center;
         color: white;
         /* margin-left: 10px; */
@@ -66,8 +68,14 @@
         z-index: 1;
     }
     html body .super #studioVid {
-       position: absolute;
-       height: 500px;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     html body .content {
         width: 100%;
@@ -137,11 +145,11 @@
         text-align: center;
     }
     html body .content .instructorsHeading {
-        font-size: 35px;
+        font-size: 40px;
         font-family: "Sacramento", cursive;
         text-align: center;
         background-color: white;
-        margin-top: 50px;
+        margin-top: 100px;
     }
     html body .content .instructors {
         display: flex;
@@ -251,10 +259,10 @@
         margin-bottom: 20px;
         transition: .4s;
     }
-    html body .content .reviews .realReviews .singleReview:hover {
+    /* html body .content .reviews .realReviews .singleReview:hover {
         transform: scale(1.15);
         transition: .4s;
-    }
+    } */
     html body .content .reviews .realReviews .singleReview .reviewerName {
         font-size: 25px;
         text-align: center;
@@ -378,13 +386,44 @@
 } */
 /* Small Computer/Tablet specs */
 
-/* @media (min-width: 700px){
-
-} */
+@media (min-width: 500px){
+    html body .header .navSection {
+        height: 100%;
+        width: 70%;
+        position: absolute;
+        left: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    html body .header .navSection .navBtn {
+        width: 100px;
+        font-family: 'Julius Sans One', sans-serif;
+        font-size: 25px;
+        color: white;
+        /* margin-left: 20px; */
+        transition: .2s;
+        cursor: pointer;
+    }
+    html body .header .navSection .navBtn a {
+        text-decoration: none;
+        color: inherit;
+    }
+    html body .header .navSection .navBtn:hover {
+        transform: scale(1.05);
+        transition: .2s;
+    }
+    /* html body .header .navSection #aboutUs {
+        margin-left: 170px;
+    }
+    html body .header .navSection #lessonInfo {
+        margin-left: 200px;
+    } */
+}
 
 /* Large Computer/Tablet specs */
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 1300px){
     html body {
         margin: 0;
         font-family: 'Quicksand', sans-serif;
@@ -413,8 +452,10 @@
         left: 25%;
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
     html body .header .navSection .navBtn {
+        width: 125px;
         font-family: 'Julius Sans One', sans-serif;
         font-size: 30px;
         color: white;

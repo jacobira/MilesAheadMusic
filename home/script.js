@@ -92,17 +92,19 @@ var reviews = [{
 createPortfolioStack();
 populateReviews();
 displayPop();
+growShrinkLogo();
 
 const scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop)
 
 window.onscroll = function(){
     growShrinkLogo();
-    if(window.innerWidth < 500){
+    if(window.innerWidth < 1300){
         mobileScrollStackCheck();
     }
 }
 window.onresize = function(){
     createPortfolioStack();
+    growShrinkLogo();
 }
 function displayBio(id){
     document.getElementById("form").innerHTML = "";
@@ -164,7 +166,7 @@ function createPortfolioStack(){
     var cardHalfMark = 125;
     var indexCounter = portfolio.length;
 
-    if(window.innerWidth >= 900){
+    if(window.innerWidth >= 1300){
         for(let i=0; i<portfolio.length; i++){
             let projectId = portfolio[i].id;
             $('#stackBox').append(`
@@ -220,7 +222,7 @@ function createPortfolioStack(){
         // adjusting z-index values to front-face current mouseover item
     }
 
-    if(window.innerWidth < 900){
+    if(window.innerWidth < 1300){
 
         for(let i=0; i<portfolio.length; i++){
             let projectId = portfolio[i].id;
@@ -297,18 +299,32 @@ function toTopOfStack(boxId){
 }
 function growShrinkLogo(){
     var logo = document.getElementById("logo");
-    if (window.innerWidth < 700){
+    if (window.innerWidth > 0){
         if (document.documentElement.scrollTop || document.body.scrollTop > 75){
             logo.style.width = "70px";
             logo.style.height = "70px";
             logo.style.top = "0px";
+            logo.style.left = "0px";
         } else {
             logo.style.width = "90px";
             logo.style.height = "90px";
             logo.style.top = "0px";
+            logo.style.left = "0px";
         }
     }
-    else {
+    if (window.innerWidth > 500){
+        if (document.documentElement.scrollTop || document.body.scrollTop > 75){
+            logo.style.width = "90px";
+            logo.style.height = "90px";
+            logo.style.top = "0px";
+        } else {
+            logo.style.width = "150px";
+            logo.style.height = "150px";
+            logo.style.top = "10px";
+            logo.style.left = "10px";
+        }
+    }
+    if (window.innerWidth > 1300){
         if (document.documentElement.scrollTop || document.body.scrollTop > 75){
             logo.style.width = "100px";
             logo.style.height = "100px";
